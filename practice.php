@@ -21,11 +21,11 @@ echo $array_month[7];
 
 $hello = "hello,";
 $name =  "John";
-$world = "'s world!"
-echo $hello $name $world;
+$world = "'s world!";
+echo $hello.$name.$world;
 
 $tech_boost = "tech";
-$tech_boost = "boost";
+$tech_boost .= "boost";
 echo $tech_boost
 
 
@@ -50,9 +50,41 @@ $2018_calendar = {
 echo $2018_calendar[December];
 
 間違い箇所
-1.=>が=にしなければならない
+1.10月,　→　"10月"
 2."2月"、→　"2月",
 3.{ }は[ ]にしなければならない。
 
+<?php
+//PHP/Laravel 03 プログラムの実行を条件分岐構文と繰り返し構文で制御できるようになろう
+// 課題１
+$name = "katano";
+if($name = "katano") {
+  echo "私は katano です";
+} 
 
-echo 1;
+//課題２
+$total = 1;
+echo $total;
+
+for($i = 1; $i <= 10000; $i++){
+  $total += $i;
+}
+echo $total;
+
+//課題3
+$fruits = array("Pitaya", "Pineapple", "Mango","Avocado","Pomegranate");
+foreach($fruits as $fruit){
+  echo "要素は" . $fruit;
+  echo "\n";
+}
+
+
+$i = 1;
+while($i <= 50){
+    if($i % 5 ==0){
+        echo $i .'<br>';
+    }
+    $i++;
+}
+
+?>
